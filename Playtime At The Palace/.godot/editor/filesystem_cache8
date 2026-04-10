@@ -1,0 +1,20 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1775859095
+icon.svg::CompressedTexture2D::4394576913286242251::1775858898::1775859098::1::::<><>::
+world.tscn::PackedScene::2367967277863005976::1775858898::0::1::::<><>::uid://cf0l2pqwbtmll::::res://assets/objects/player.tscn<>uid://db6nidbsuy6du::::res://assets/objects/statue.tscn<>uid://bebdpboa1dyjg::::res://assets/objects/path rectangle.tscn<>uid://bh0bgbus6gtvn::::res://assets/objects/path round.tscn<>uid://cujnlcg72raiu::::res://assets/models/Bench.glb
+::res://assets/::1775859045
+::res://assets/models/::1775858909
+Bench.glb::PackedScene::6196006720378515548::1775858898::1775859098::1::::<><>::
+Fence .glb::PackedScene::1427116484336562613::1775858898::1775859098::1::::<><>::
+Statue.glb::PackedScene::7908343224119502269::1775858898::1775859100::1::::<><>::
+Tree.glb::PackedScene::5909052435269688897::1775858898::1775859100::1::::<><>::
+::res://assets/objects/::1775858909
+bench.tscn::PackedScene::6247706945053764923::1775858898::0::1::::<><>::uid://cujnlcg72raiu::::res://assets/models/Bench.glb
+fence.tscn::PackedScene::4282575872637021129::1775858898::0::1::::<><>::uid://ulknunkvyheb::::res://assets/models/Fence .glb
+path rectangle.tscn::PackedScene::2669449448071665872::1775858898::0::1::::<><>::
+path round.tscn::PackedScene::2929423549045979011::1775858898::0::1::::<><>::
+player.tscn::PackedScene::5176111946352521241::1775858898::0::1::::<><>::res://assets/scripts/player.gd
+statue.tscn::PackedScene::7294250372310790262::1775858898::0::1::::<><>::uid://dkw4i0v55760p::::res://assets/models/Statue.glb
+tree.tscn::PackedScene::8125888636421684069::1775858898::0::1::::<><>::uid://cqgnh3he3si14::::res://assets/models/Tree.glb
+::res://assets/scripts/::1775858909
+player.gd::GDScript::-1::1775858898::0::1::::<>CharacterBody3D<>::
