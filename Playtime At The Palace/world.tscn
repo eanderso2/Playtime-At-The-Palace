@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://80ccs22txx25"]
+
+[ext_resource type="PackedScene" uid="uid://cf0l2pqwbtmll" path="res://assets/objects/player.tscn" id="1_4vdty"]
+[ext_resource type="PackedScene" uid="uid://db6nidbsuy6du" path="res://assets/objects/statue.tscn" id="2_wpasi"]
+[ext_resource type="PackedScene" uid="uid://bebdpboa1dyjg" path="res://assets/objects/path rectangle.tscn" id="3_om3ib"]
+[ext_resource type="PackedScene" uid="uid://bh0bgbus6gtvn" path="res://assets/objects/path round.tscn" id="4_jkwor"]
+[ext_resource type="PackedScene" uid="uid://cujnlcg72raiu" path="res://assets/models/Bench.glb" id="5_6254o"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_f3wx3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtuxb"]
+albedo_color = Color(0, 0.537255, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_myjhm"]
+material = SubResource("StandardMaterial3D_wtuxb")
+size = Vector2(20, 40)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_36axh"]
+
+[sub_resource type="Sky" id="Sky_j7wxw"]
+sky_material = SubResource("ProceduralSkyMaterial_36axh")
+
+[sub_resource type="Environment" id="Environment_ku6kv"]
+background_mode = 2
+sky = SubResource("Sky_j7wxw")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_f3wx3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_myjhm")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ku6kv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.783379, 0.621544, 0, -0.621544, 0.783379, -9.83788, 14.4369, 0)
+
+[node name="player" parent="." instance=ExtResource("1_4vdty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.137116, 3.04233, 13.745)
+
+[node name="path" parent="." instance=ExtResource("3_om3ib")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 20, 2.08165e-12, 2.08165e-12, 10)
+
+[node name="path2" parent="." instance=ExtResource("4_jkwor")]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 6, 2.08165e-12, 2.08165e-12, 10)
+
+[node name="Statue" parent="." instance=ExtResource("2_wpasi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 4.75, 10)
+
+[node name="Bench" parent="." instance=ExtResource("5_6254o")]
+transform = Transform3D(0.176777, -1.23315e-16, -0.176777, 8.71967e-17, 0.25, -8.71967e-17, 0.176777, 4.01385e-25, 0.176777, 2.25, 0.5, 7.75)
+
+[node name="Bench2" parent="." instance=ExtResource("5_6254o")]
+transform = Transform3D(0.176777, 4.01385e-25, 0.176777, 8.71967e-17, 0.25, -8.71967e-17, -0.176777, 1.23315e-16, 0.176777, -2.25, 0.5, 7.75)
+
+[node name="Bench3" parent="." instance=ExtResource("5_6254o")]
+transform = Transform3D(-0.176777, 1.23315e-16, 0.176777, 8.71967e-17, 0.25, -8.71967e-17, -0.176777, -4.01385e-25, -0.176777, -2.25, 0.5, 12.25)
+
+[node name="Bench4" parent="." instance=ExtResource("5_6254o")]
+transform = Transform3D(-0.176777, -4.01385e-25, -0.176777, 8.71967e-17, 0.25, -8.71967e-17, 0.176777, -1.23315e-16, -0.176777, 2.25, 0.5, 12.25)

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvao25uhpa41d"]
+
+[ext_resource type="PackedScene" uid="uid://cujnlcg72raiu" path="res://assets/models/Bench.glb" id="1_mw0fa"]
+
+[node name="Bench" instance=ExtResource("1_mw0fa")]

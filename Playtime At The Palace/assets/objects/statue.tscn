@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://db6nidbsuy6du"]
+
+[ext_resource type="PackedScene" uid="uid://dkw4i0v55760p" path="res://assets/models/Statue.glb" id="1_xbs8w"]
+
+[node name="Statue" instance=ExtResource("1_xbs8w")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="17"]
